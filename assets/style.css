@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    color: #3a3a3a;
+}
+
+/* headings and logo */
+
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: green;
+}
+
+#logo {
+    float: left;
+    font-size: 350%;
+
+    margin-left: 50px;
+}
+
+/* navigation links */
+
+#menu{
+    font-size: 110%;
+    letter-spacing: 4px;
+}
+#menu, #logo{
+    line-height: 80%;
+}
+
+#menu li {
+    float: right;
+    margin-right: 30px;
+    list-style-type: none;
+}
+#menu a{
+    text-decoration: none;
+    color: inherit;
+}
+#menu a:hover{
+    border-bottom: 1px solid#3a3a3a;
+}
+.active{
+    border-bottom: 1px solid #3a3a3a
+}
+#cover-text, #cover-text h2{
+    color: #fff;
+}
+/* project-outer zoom */
+#project-outer{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+/* project photo */
+#project-photo{
+    height: 600px;
+    width: 100%;
+    background: url('../assets/images/project\ photo.jpg') no-repeat center center;
+
+
+/* zoom affect */
+animation-name: project-zoom;
+animation-duration: 5s;
+animation-fill-mode: backwards;
+}
+
+/* creates project zoom level */
+@keyframes project-zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+#cover-text{
+    font-size: 140%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(82, 39, 38, 0.7);
+
+    bottom: 30px;
+    right: 150px;
+
+    position: absolute;
+}
+
+/* home-training */
+
+#home-training{
+    height: 600px;
+}
+#home-training h1{
+    color: black;
+}
+#left-of{
+    padding-top: 30px;
+    width: 33%;
+    float: left;
+    
+}
+#right-of{
+    padding-top: 30px;
+    width: 33%;
+    float: right;
+
+}
+
+#center-of{
+    width: 33%;
+    margin: 0 auto;
+}
+hr{
+    border-top: 1px solid #3a3a3a;
+    width: 100%;
+    margin:5px 0;   
+}
+
+.left-of-top{
+    width: 60%;
+    float: right;
+    line-height: 20px;
+    clear: all;
+    margin-bottom: 50px;
+}
+.right-of-top{
+    width: 60%;
+    float: left;
+    line-height: 20px;
+    clear: all;
+    margin-bottom: 50px;
+}
+.right-of-top h2{
+    text-align: right;
+}
+.right-of-top p{
+    text-align: right;
+}
+#top{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 250%;
+}
+#izzatillo{
+    width: 300px;
+    height: 700px;
+    padding: 30px;
+    border-style: solid;
+    border-color: rgb(25, 4, 4);
+    border-width: 1px;
+    border-radius: 70%;
+    margin: 0 auto;  
+}
+#bobirmirzo{
+    background: url('../assets/images/center.jpg') no-repeat center center;
+    height: 100%;
+    border-radius: 50%;
+}
+footer{
+    height: 150px;
+}
+#down{
+    text-align: center;
+   bottom: auto 0;
+}
+#down > li{
+  display: inline;
+
+}
+#down i{
+    font-size: 150%;
+    margin: 1%;
+    padding: 5%;
+    color: grey;
+}
+#newcss{
+    background-image: url();
+}
+#newcss > section{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vh;
+  height: 100vh;
+  
+ 
+}
+#newcss ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+#newcss ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background: #3e3f46;
+    padding: 15px;
+    z-index: var(--i);
+     transition: 0.5s;
+  }
+  #newcss ul li:hover{
+    background: #33a3ee;
+    transform: translateX(50px);
+    }
+    #newcss ul li::before
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 40px;
+      height: 100%;
+      background: #2e3133;
+      transform-origin: right;
+      transform: skewY(45deg);
+      transition: 0.5s;
+    }
+    #newcss ul li:hover::before
+    {
+      background: #1f5378;
+    }
+    #newcss ul li::after
+    {
+       content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: #35383e;
+      transform-origin: bottom;
+      transform: skewX(45deg);
+      transition: 0.5s;
+    }
+    #newcss ul li:hover::after
+    {
+      background: #2982b9;
+    }
+#newcss ul li a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5em;
+    
+  }
+  #newcss ul li:hover a
+  {
+    color: #fff;
+  }
+  #newcss ul li Last-child::after
+  {
+    box-shadow: -120px 120px  20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Media adjucement */
+  @media screen and (max-width:1200px) {
+    #home-training {
+       width: 65%;
+       height: 1200px;
+       margin:auto 0;
+  }
+
+  #top {
+    padding: 30px 0;
+    margin: 0;
+  }
+  #left-of, #right-of{
+    width: 100%;
+    float: left;
+    padding: 0%;
+  }
+  #center-of{
+    width: 100%;
+    clear: all;
+    padding: 0;
+    float: left;
+  }
+  hr{
+    display: none;
+  }
+}
+@media screen and width (max-width: 950px;){
+    #menu{
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+    #cover-text{
+        left: 0;
+    }
+    #home-training{
+        width: 90%;
+        margin: 0 auto;
+        height: 1200px;
+    }
+}
+    
+
+#project signup{
+    height: 800px;
+    width: 400%;
+    overflow: hidden;
+
+    position: relative;
+}
+#menu{
+    color: black;
+}
+#text{
+    background: url('../assets/images/home1.jpg');
+    height: 700px;
+    width: 150%;
+    float: left;
+}
+#up{
+    text-align: left;
+    margin: auto 0;
+    font-size: 210%;
+}
+#first-name{
+    color:yellow;
+}
+
+.SignUp {
+    margin: 150px 10% 0 0;
+    color:#fff;
+    background-color:rgba(60, 60, 60, 0.6);
+    max-width: 400px;
+    position:absolute;
+    left:10%;
+    padding:30px;
+}
+.SignUp > h2 {
+    color:#fafafa;
+    margin-bottom:20px;
+}
+.text-input{
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+}
+.text-input:hover {
+    border-color: #f16c6b;
+}
+.join-button{
+    margin-top:20px;
+    border-radius:2px;
+    padding:15px 32px 15px 32px;
+    text-align:center;
+    font-size:100%;
+    background-color:#f16c6b;
+    color:#fafafa;
+    display:block;
+}
+.join-button:hover{
+    background-color:#fafafa;
+    color:#f16c6b;
+}
